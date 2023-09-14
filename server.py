@@ -15,14 +15,14 @@ def greeting():
 @app.route("/calculator/add", methods=['POST'])
 def add():
     data=request.json 
-    sum=result(data['first']+data['second'])
-    return jsonify(sum)
+    response=result(data['first']+data['second'])
+    return jsonify(response)
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
     data=request.json 
-    sum=result(data['first']-data['second'])
-    return jsonify(sum)
+    response=result(data['first']-data['second'])
+    return jsonify(response)
 
 
 if __name__ == '__main__':
